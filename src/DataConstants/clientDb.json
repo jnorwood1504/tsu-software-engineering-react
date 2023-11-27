@@ -1,3 +1,4 @@
+
 {
   "clients": [
     {
@@ -5,42 +6,362 @@
       "client_name": "Drills r US",
       "state": "TN",
       "num_of_inventories": 2,
-      "num_of_contacts": 4
+      "num_of_contacts": 4,
+      "color": "bgfillred"
     },
     {
         "id": 2,
         "client_name": "Kruger",
         "state": "KY",
-        "num_of_inventories": 9001,
-        "num_of_contacts": 45
+        "num_of_inventories": 9,
+        "num_of_contacts": 45,
+        "color": "red"
     },
     {
         "id": 7,
         "client_name": "Lowels",
         "state": "CA",
         "num_of_inventories": 60,
-        "num_of_contacts": 1
+        "num_of_contacts": 100,
+        "color": "red"
     },
     {
         "id": 9,
         "client_name": "Pooblix",
         "state": "AL",
-        "num_of_inventories": 314159,
-        "num_of_contacts": 205
+        "num_of_inventories": 31159,
+        "num_of_contacts": 205000,
+        "color": "red"
     },
     {
         "id": 4,
         "client_name": "Amazoom",
         "state": "CO",
         "num_of_inventories": 100,
-        "num_of_contacts": 25
+        "num_of_contacts": 250,
+        "color": "red"
     },
     {
         "id": 6,
         "client_name": "EB Gamers",
         "state": "UT",
         "num_of_inventories": 26,
-        "num_of_contacts": 4
+        "num_of_contacts": 40,
+        "color": "red"
+    },
+    {
+      "id": 9,
+      "client_name": "Ross",
+      "state": "WY",
+      "num_of_inventories": 90,
+      "num_of_contacts": 450,
+      "color": "red"
+    },
+    {
+      "id": 3,
+      "client_name": "CFA",
+      "state": "GA",
+      "num_of_inventories": 9033,
+      "num_of_contacts": 450055,
+      "color": "red"
+    }
+  ,{
+      "id": 48,
+      "client_name": "Del Taco",
+      "state": "RI",
+      "num_of_inventories": 95,
+      "num_of_contacts": 450,
+      "color": "red"
+    },
+    {
+      "id": 233,
+      "client_name": "FireHouse",
+      "state": "TN",
+      "num_of_inventories": 23,
+      "num_of_contacts": 45,
+      "color": "red"
+    },
+    {
+      "id": 90,
+      "client_name": "Drill-a",
+      "state": "AL",
+      "num_of_inventories": 2,
+      "num_of_contacts": 7,
+      "color": "bgfillred"
+    },
+    {
+      "id": 20,
+      "client_name": "Aldi",
+      "state": "CA",
+      "num_of_inventories": 92,
+      "num_of_contacts": 450,
+      "color": "red"
+    },
+    {
+      "id": 89,
+      "client_name": "Lowels",
+      "state": "MI",
+      "num_of_inventories": 60,
+      "num_of_contacts": 100,
+      "color": "red"
+    },
+    {
+      "id": 93,
+      "client_name": "McDonalds",
+      "state": "TX",
+      "num_of_inventories": 204,
+      "num_of_contacts": 205,
+      "color": "red"
+    },
+    {
+      "id": 4,
+      "client_name": "Amazon",
+      "state": "CO",
+      "num_of_inventories": 73,
+      "num_of_contacts": 250,
+      "color": "red"
+    }
+  ],
+  "inventory": [
+    {
+      "id": 1,
+      "inventory_name": "Inventory 684",
+      "inventory_address": "711 Roaring Ln, Houston Texas, ",
+      "inventory_current_num": 2,
+      "inventory_max_num": 40
+    },
+    {
+      "id": 2,
+      "inventory_name": "Inventory 56",
+      "inventory_address": "116 Trenton Street Indianapolis, IN 46201",
+      "inventory_current_num": 901,
+      "inventory_max_num": 4500
+    },
+    {
+      "id": 97,
+      "inventory_name": "Inventory 335",
+      "inventory_address": "7380 Brown Drive, Newington, CT 06111",
+      "inventory_current_num": 311,
+      "inventory_max_num": 205934
+    },
+    {
+      "id": 43,
+      "inventory_name": "Inventory 451",
+      "inventory_address": "28 Heritage St.,Grand Forks, ND 58201",
+      "inventory_current_num": 1300,
+      "inventory_max_num": 25022
+    },
+    {
+      "id": 12,
+      "inventory_name": "Inventory 206",
+      "inventory_address": "106 Spring Street, Marcus Hook, PA 19061",
+      "inventory_current_num": 276,
+      "inventory_max_num": 300
+    },
+    {
+      "id": 73,
+      "inventory_name": "Inventory 728",
+      "inventory_address": "8819 East Young Lane, Brick, NJ 08723",
+      "inventory_current_num": 620,
+      "inventory_max_num": 1000
+    },
+    {
+      "id": 65,
+      "inventory_name": "Inventory 235",
+      "inventory_address": "7043 Princeton Road, Waterloo, IA 50701",
+      "inventory_current_num": 31,
+      "inventory_max_num": 32
+    },
+    {
+      "id": 49,
+      "inventory_name": "Inventory 42",
+      "inventory_address": "787 Lyme Street, Casselberry, FL 32707",
+      "inventory_current_num": 130,
+      "inventory_max_num": 250
+    },
+    {
+      "id": 7,
+      "inventory_name": "Inventory 75",
+      "inventory_address": "96 Marsh St. Palm Beach Gardens, FL 33410",
+      "inventory_current_num": 60,
+      "inventory_max_num": 100
+    },
+    {
+      "id": 9,
+      "inventory_name": "Inventory 345",
+      "inventory_address": "7588 Prince Ave., Culpeper, VA 22701",
+      "inventory_current_num": 3141,
+      "inventory_max_num": 205934
+    },
+    {
+      "id": 4,
+      "inventory_name": "Inventory 98",
+      "inventory_address": "8971 Fairfield St., Woodbridge, VA 22191",
+      "inventory_current_num": 100,
+      "inventory_max_num": 250
+    },
+    {
+      "id": 6,
+      "inventory_name": "Inventory 26",
+      "inventory_address": "59 Big Rock Cove Street, Alabaster, AL 35007",
+      "inventory_current_num": 262,
+      "inventory_max_num": 3090
+    },
+    {
+      "id": 8,
+      "inventory_name": "Inventory 649",
+      "inventory_address": "9731 East Valley Farms Dr., Fleming Island, FL 32003 ",
+      "inventory_current_num": 278,
+      "inventory_max_num": 288
+    },
+    {
+      "id": 61,
+      "inventory_name": "Inventory 206",
+      "inventory_address": "98C Overlook Street, Lynnwood, WA 98037",
+      "inventory_current_num": 30,
+      "inventory_max_num": 100
+    },
+    {
+      "id": 73,
+      "inventory_name": "Inventory 728",
+      "inventory_address": "8819 East Young Lane, Brick, NJ 08723",
+      "inventory_current_num": 620,
+      "inventory_max_num": 1000
+    },
+    {
+      "id": 32,
+      "inventory_name": "Inventory 204",
+      "inventory_address": "8204 Thatcher Street, Pomona, CA 91768",
+      "inventory_current_num": 27,
+      "inventory_max_num": 45
+    }
+  ],
+  "resources": [
+    {
+      "id": 2,
+      "resources_name": "Nike Running Shoes ",
+      "resources_address": "14z",
+      "resources_current_num": 30,
+      "resources_max_num": 39
+    },
+    {
+      "id": 4,
+      "resources_name": "Straws ",
+      "resources_address": "2r",
+      "resources_current_num": 3,
+      "resources_max_num": 7
+    },
+    {
+      "id": 3,
+      "resources_name": "Phone Cases ",
+      "resources_address": "37c",
+      "resources_current_num": 40,
+      "resources_max_num": 40
+    },
+    {
+      "id": 2,
+      "resources_name": "How to Use React Book ",
+      "resources_address": "33p",
+      "resources_current_num": 33,
+      "resources_max_num": 44
+    },
+    {
+      "id": 6,
+      "resources_name": "USB Charging Cord ",
+      "resources_address": "42s",
+      "resources_current_num": 37,
+      "resources_max_num": 60
+    },
+    {
+      "id": 7,
+      "resources_name": "Apple Airpod Pros 2",
+      "resources_address": "23e",
+      "resources_current_num": 1,
+      "resources_max_num": 10
+    },
+    {
+      "id": 13,
+      "resources_name": "Utility Desk ",
+      "resources_address": "32s",
+      "resources_current_num": 25,
+      "resources_max_num": 31
+    },
+    {
+      "id": 22,
+      "resources_name": "Pillows for Bed - Pink ",
+      "resources_address": "25p",
+      "resources_current_num": 32,
+      "resources_max_num": 70
+    },
+    {
+      "id": 36,
+      "resources_name": "Pack of 16 Pencils ",
+      "resources_address": "6r",
+      "resources_current_num": 43,
+      "resources_max_num": 400
+    },
+    {
+      "id": 42,
+      "resources_name": "Paint Brush ",
+      "resources_address": "19e",
+      "resources_current_num": 33,
+      "resources_max_num": 44
+    },
+    {
+      "id": 98,
+      "resources_name": "Remote Control for Fan ",
+      "resources_address": "19x",
+      "resources_current_num": 1,
+      "resources_max_num": 200
+    },
+    {
+      "id": 9,
+      "resources_name": "Bags for Dogs ",
+      "resources_address": "93e",
+      "resources_current_num": 1,
+      "resources_max_num": 100
+    },
+    {
+      "id": 37,
+      "resources_name": "Lamp for Living Room ",
+      "resources_address": "81t",
+      "resources_current_num": 20,
+      "resources_max_num": 52
+    },
+    {
+      "id": 102,
+      "resources_name": "Red Lipstick ",
+      "resources_address": "73f",
+      "resources_current_num": 304,
+      "resources_max_num": 970
+    },
+    {
+      "id": 67,
+      "resources_name": "Plants - Tulips",
+      "resources_address": "64w",
+      "resources_current_num": 80,
+      "resources_max_num": 90
+    },
+    {
+      "id": 39,
+      "resources_name": "Laptop Case ",
+      "resources_address": "4a",
+      "resources_current_num": 30,
+      "resources_max_num": 44
+    },
+    {
+      "id": 91,
+      "resources_name": "14K Diamond Earrings ",
+      "resources_address": "65b",
+      "resources_current_num": 1,
+      "resources_max_num": 3
+    },
+    {
+      "id": 82,
+      "resources_name": "Press on Nails- Orange ",
+      "resources_address": "23r",
+      "resources_current_num": 34,
+      "resources_max_num": 100
     }
   ]
 }
