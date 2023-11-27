@@ -2,13 +2,19 @@ import axios from "axios";
 
 export interface InventoryTableRow {
     id: Number,
-    Inventory: Number
+    InventoryName: String,
+    InventoryAddress: String,
+    InventoryCount: Number,
+    InventoryMaxCount: Number,
+    //InventoryColor: String
 }
 
 export interface InventoryTableJsonObject {
     id: Number,
-    inventory: Number,
-    inventories_type: String,
+    inventory_name: String,
+    inventory_address: String,
+    inventory_current_num: Number,
+    inventory_max_num: Number
 }
 
 export async function getInventoryTable() {
