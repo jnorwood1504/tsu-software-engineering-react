@@ -6,7 +6,10 @@ function Footer() {
             <div className="content">
                 <ul>
                     <li><a className="navbar-item" href="/">Home</a></li>
-                    <li><a className="navbar-item" href="/about">About</a></li>
+                    <li><a className="navbar-item" href="/inventory">Inventory</a></li>
+                    <li><a className="navbar-item" href="/resourcelist">Resource</a></li>
+                    <li><a className="navbar-item" href="/accesslogs">Access Logs</a></li>
+                    <li><a className="navbar-item" href="/help">Help</a></li>
                 </ul>
             </div>
         </footer>
