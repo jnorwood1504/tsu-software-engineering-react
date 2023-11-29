@@ -1,9 +1,10 @@
 import "./App.css";
-import About from "./Views/About";
 import Home from "./Views/Home";
 import Inventory from "./Views/Inventory";
-import ResourceList from ".Views/Inventory";
-
+import Help from "./Views/Help";
+import ResourceList from "./Views/ResourceList";
+import AccessLogs from "./Views/AccessLogs";
+import CreateAccount from "./Views/CreateAccount";
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -17,9 +18,11 @@ function App() {
       <Routes>
           <Route path="/">
             <Route index element={<Home/>}></Route>
-            <Route path="about" element={<About/>}></Route>
             <Route path="inventory" element={<Inventory/>}></Route>
+            <Route path="help" element={<Help/>}></Route>
             <Route path="resourcelist" element={<ResourceList/>}></Route>
+            <Route path="accesslogs" element={<AccessLogs/>}></Route>
+            <Route path="createaccount" element={<CreateAccount/>}></Route>
           </Route>
         </Routes>
     </Router>
