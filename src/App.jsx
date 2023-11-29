@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require("./App.css");
 const Home_1 = __importDefault(require("./Views/Home"));
 const Inventory_1 = __importDefault(require("./Views/Inventory"));
-const profile_1 = __importDefault(require("./Views/profile"));
 const Help_1 = __importDefault(require("./Views/Help"));
 const ResourceList_1 = __importDefault(require("./Views/ResourceList"));
+const CreateAccount_1 = __importDefault(require("./Views/CreateAccount"));
 const react_1 = __importDefault(require("react"));
 const react_router_dom_1 = require("react-router-dom");
 function App() {
@@ -20,6 +20,7 @@ function App() {
             <react_router_dom_1.Route path="home" element={<Home_1.default />}></react_router_dom_1.Route>
             <react_router_dom_1.Route path="help" element={<Help_1.default />}></react_router_dom_1.Route>
             <react_router_dom_1.Route path="resourcelist" element={<ResourceList_1.default />}></react_router_dom_1.Route>
+            <react_router_dom_1.Route path="createaccount" element={<CreateAccount_1.default />}></react_router_dom_1.Route>
           </react_router_dom_1.Route>
         </react_router_dom_1.Routes>
     </react_router_dom_1.BrowserRouter>);
