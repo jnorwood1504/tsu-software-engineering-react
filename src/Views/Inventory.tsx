@@ -1,5 +1,5 @@
 
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
 import "../App.css";
 import "./Inventory.css";
@@ -7,11 +7,6 @@ import {InventoryTableRow, InventoryTableJsonObject, getInventoryTable} from "..
 import { INIT_INVENTORY_RESULT_DATA } from "../DataConstants/InventoryTableConstants";
 import 'bulma/css/bulma.min.css';
 
-
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import {faFaceSmile, faFaceMeh, faFaceFrown, faFaceSurprise} from '@fortawesome/free-solid-svg-icons'
 import dummyData from "../DataConstants/clientDb.json";
 const data: any = dummyData;
 
@@ -23,9 +18,11 @@ export default function Main() {
   const [isModalActive, setIsModalActive] = useState<Boolean>(false);
 
   const navigate = useNavigate();
-  const goToInventoryList = () => navigate("/resourcelist");
+  const goToResources = () => navigate("/resourcelist");
+  const addInventory = () => navigate("/createaccount");
 
-
+  //A function that adds more inventories
+  
   //A function that supports the creation of the inventory table.
   function setInventoryTable(){
     try{
@@ -46,7 +43,7 @@ export default function Main() {
 
 
           //Overwrite the table data.
-          setTableData(inventoryTableArray);
+      
         },
         (error) => {
           console.log(error)
@@ -58,12 +55,13 @@ export default function Main() {
   function toggleModal() {
     setIsModalActive(!isModalActive);
   }
-
   function showModal(key: number){
     let inventoryRow: InventoryTableRow = tableData.at(key);
     setmodalInventoryData(inventoryRow);
     toggleModal();
   }
+  
+
 
 
   const Modal = ({ closeModal, modalState }: { closeModal: any, modalState: boolean }) => {
@@ -125,20 +123,20 @@ export default function Main() {
 
   return (
     <>
-      <h1 className="is-size-3 pb-5 bg-black">Inventory List</h1>
+      <button className="button is-dark is-info" onClick={addInventory} >Add</button> <button className="button is-dark is-info" onClick={goToResources} >View Resources</button>
+      <h1 className="is-size-2 pb-6 has-text-weight-medium bg-black">Inventory List</h1>
       <div className="box columns is-centered is-radiusless">
         <div className="column is-12 px-0 py-0">
             <table className="table is-striped is-fullwidth">
                 <thead>
                   <tr>
-{                     <th><FontAwesomeIcon icon={faCoffee}/></th>}
-{                     <th><FontAwesomeIcon icon={faFaceSmile} color="orange"/></th>}
+{          /*           <th><FontAwesomeIcon icon={faCoffee}/></th>*/}
+{                    /*<th><FontAwesomeIcon icon={faFaceSmile} color="orange"/></th>*/}
                     <th>#</th>
                     <th>Inventory Name</th>
                     <th>Inventory Address</th>
-                    <th>Current Resources #</th>
-                    <th>Max Resources #</th>
-                    <th>Inventory Status</th>
+                    <th>Current Amount #</th>
+                    <th>Max Amount #</th>
                   </tr>
                 </thead>
 
@@ -152,36 +150,7 @@ export default function Main() {
                       <td className= "red">{(row.inventory_name ? row.inventory_name : "")}</td>
                       <td className= "bgfillred">{(row.inventory_address ? row.inventory_address : "")}</td>
                       <td className= "bgfill">{(row.inventory_current_num ? row.inventory_current_num.toString() : "")}</td>
-                      <td className= "bgfill">{(row.inventory_max_num ? row.inventory_max_num.toString() : "")}</td>
-                       {
-                       (() => {
-                                let myval =(row.inventory_current_num / row.inventory_max_num) * 100
-                                console.log(myval)
-                              if (myval <= 10) {
-                                return (
-                                   <td className= "a">{<FontAwesomeIcon icon={faFaceFrown} />}</td>
-                                )
-                              }
-                              else if (myval>10 && myval<39){
-                                return (
-                                    <td>{<FontAwesomeIcon icon={faFaceMeh} className= "b"/>}</td>
-                                )
-                              }
-                            else if (myval>39 && myval<69){
-                                return (
-                                    <td>{<FontAwesomeIcon icon={faFaceSurprise} className= "c"/>}</td>
-                                )
-                            }
-                            else if(myval>69 && myval<100){
-                                return (
-                                    <td>{<FontAwesomeIcon icon={faFaceSmile} className= "d"/>}</td>
-                                )
-                            }
-                            })()
-                       }
-                      <td className= "red"><button className="button is-dark is-info" onClick={goToInventoryList/*() => showModal(i)*/}>View Resource List</button></td>
-{/*}                       <td className= "bgfill"><button className="button is-dark" onClick={() => showModal(i)}>Edit Client Details</button></td>*/}
-                    </tr>
+                      <td className= "bgfill">{(row.inventory_max_num ? row.inventory_max_num.toString() : "")}</td>                    </tr>
                   )}
                 </tbody>
             </table>
