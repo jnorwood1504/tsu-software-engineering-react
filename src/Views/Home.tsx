@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 import "../App.css";
 import {ClientTableRow, ClientTableJsonObject, getClientTable} from "../DataObjects/ClientTableInterface";
 import { INIT_RESULT_DATA } from "../DataConstants/ClientTableConstants";
+import dummyData from "../DataConstants/clientDb.json";
+import {useNavigate} from "react-router-dom";
+const data: any = dummyData;
+//export default
+function Home() {
 
-
-
-
-export default function Main() {
-    
   const [tableData, setTableData] = useState<ClientTableRow[]>([INIT_RESULT_DATA]);
   const [modalClientData, setmodalClientData] = useState<ClientTableRow>(INIT_RESULT_DATA);
   const [isModalActive, setIsModalActive] = useState<Boolean>(false);
+  const navigate = useNavigate();
+  const goToInventoryList = () => navigate("/inventory");
 
 
   //A function that supports the creation of the client table.
@@ -19,7 +21,7 @@ export default function Main() {
       getClientTable().then(
         function (response: any){
           let clientTableArray: ClientTableRow[] = [];
-          
+
           //Define the output of my objects to the array.
           response.data.forEach((element: ClientTableJsonObject) => {
             clientTableArray.push({
@@ -40,8 +42,8 @@ export default function Main() {
         }
       );
     } catch{}
-  } 
-  
+  }
+
   function toggleModal() {
     setIsModalActive(!isModalActive);
   }
@@ -57,7 +59,7 @@ export default function Main() {
     if(!modalState) {
       return null;
     }
-    
+
     return(
       <div className="modal is-active">
         <div className="modal-background"></div>
@@ -108,12 +110,13 @@ export default function Main() {
   useEffect(() => {
     setClientTable();
   }, []);
-  
+
   return (
     <>
-      <h2 className="is-size-2 pb-6 has-text-weight-medium">Client List</h2>
+      <td><button className="button is-dark is-info" onClick={goToInventoryList/*() => showModal(i)*/}>View The Inventory</button></td>
+      <h2 className="is-size-2 pb-6 has-text-weight-medium bg-black"> Client Homepage</h2>
       <div className="box columns is-centered is-radiusless">
-        <div className="column is-12 px-0 py-0"> 
+        <div className="column is-12 px-0 py-0">
             <table className="table is-striped is-fullwidth">
                 <thead>
                   <tr>
@@ -126,15 +129,40 @@ export default function Main() {
                   </tr>
                 </thead>
                 <tbody>
-                  {tableData.map((row, i) =>
+                  {data.clients.map((row:any, i:number) =>
                     <tr id={(row.id ? row.id.toString() : "")}>
-                      <td>{(row.id ? row.id.toString() : "")}</td>
-                      <td>{(row.ClientName ? row.ClientName : "")}</td>
-                      <td>{(row.AddressState ? row.AddressState : "")}</td>
-                      <td>{(row.InventoryCount ? row.InventoryCount.toString() : "")}</td>
-                      <td>{(row.ContactCount ? row.ContactCount.toString() : "")}</td>
-                      <td><button className="button is-dark" onClick={() => showModal(i)}>View Client Details</button></td>
-                    </tr> 
+                      <td className= "bg">{(row.id ? row.id.toString() : "")}</td>
+                      <td>{(row.client_name ? row.client_name : "")}</td>
+                      <td>{(row.state ? row.state : "")}</td>              {
+               (() => {
+                        let myval =(row.num_of_inventories / row.num_of_contacts) * 100
+                        console.log(myval)
+                          if (myval <= 10) {
+                            return (
+                            <td className= "bg-red" >{(row.num_of_inventories ? row.num_of_inventories.toString() : "")}</td>
+                            )
+                          }
+                          else if (myval>10 && myval<39){
+                          return (
+                            <td className= "bg-yellow" >{(row.num_of_inventories ? row.num_of_inventories.toString() : "")}</td>
+                          )
+                          }
+                          else if (myval>39 && myval<69){
+                          return (
+                            <td className= "bg-blue" >{(row.num_of_inventories ? row.num_of_inventories.toString() : "")}</td>
+                          )
+                          }
+                          else if (myval>69 && myval<100){
+                              return (
+                                  <td className= "bg-green" >{(row.num_of_inventories ? row.num_of_inventories.toString() : "")}</td>
+                              )
+                          }
+                            })()
+                      }
+
+                      {/*<td>{(row.num_of_inventories ? row.num_of_inventories.toString() : "")}</td>*/}
+                      <td>{(row.num_of_contacts ? row.num_of_contacts.toString() : "")}</td>
+                    </tr>
                   )}
                 </tbody>
             </table>
@@ -147,3 +175,4 @@ export default function Main() {
     </>
   );
 }
+export default Home;
