@@ -4,7 +4,7 @@ import Inventory from "./Views/Inventory";
 import Help from "./Views/Help";
 import ResourceList from "./Views/ResourceList";
 import AccessLogs from "./Views/AccessLogs";
-import CreateAccount from "./Views/CreateAccount";
+import CreateInventory from "./Views/CreateInventory";
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -22,7 +22,7 @@ function App() {
             <Route path="help" element={<Help/>}></Route>
             <Route path="resourcelist" element={<ResourceList/>}></Route>
             <Route path="accesslogs" element={<AccessLogs/>}></Route>
-            <Route path="createaccount" element={<CreateAccount/>}></Route>
+            <Route path="CreateInventory" element={<CreateInventory/>}></Route>
           </Route>
         </Routes>
     </Router>
