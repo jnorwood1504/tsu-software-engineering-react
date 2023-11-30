@@ -1,0 +1,28 @@
+
+.a{
+    color: red;
+}
+.b{
+    color: yellow;
+}
+.c{
+    color: blue;
+}
+.d{
+    color: green;
+}
+.bgfill{
+   background-color: rgb(255, 255, 255);
+}
+.bgfillorange{
+    background-color: orange;
+}
+.bgfillyellow{
+    background-color: yellow;
+}
+.bgfillgreen{
+    background-color: green;
+}
+.td{
+    justify-content: center;
+}
