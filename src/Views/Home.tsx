@@ -125,7 +125,9 @@ function Home() {
                     <th>State</th>
                     <th>Number of Inventories</th>
                     <th>Number of Contacts</th>
-                    <th></th>
+                    <th><div style={{display:"flex", justifyContent:"right"}}>
+            <button className="button is-dark is-info">Sort by</button>
+          </div></th>
                   </tr>
                 </thead>
                 <tbody>
